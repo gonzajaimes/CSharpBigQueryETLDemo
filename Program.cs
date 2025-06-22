@@ -10,7 +10,7 @@ class Program
 
         var data = Extractor.Extract("data/customers.csv");
         var transformed = Transformer.Transform(data);
-        await Loader.LoadToBigQuery(transformed);
+        await Loader_Batch.LoadToBigQueryBatch(transformed);
 
         Console.WriteLine("ETL process completed.");
     }
